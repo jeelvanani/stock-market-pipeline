@@ -4,14 +4,14 @@ import requests
 from azure.storage.filedatalake import DataLakeServiceClient
 
 # Replace with your Azure details
-STORAGE_ACCOUNT_NAME = "stockdatastoragejeel"
-STORAGE_ACCOUNT_KEY = "OzKw7sqN5Vs71QUuCvYZBnvAlxQt2dFQzwYRxHBarSZL36DV5C+BY7BPgrZJVX5xVznANt8yFvxa+ASt1vwgRw=="
+STORAGE_ACCOUNT_NAME = "{stockdatastorage}"
+STORAGE_ACCOUNT_KEY = "{Account_key}"
 FILE_SYSTEM_NAME = "raw-stock-data"  # Container name in ADLS Gen2
 DIRECTORY_NAME = "raw-stock-data"
 FILE_NAME = "stock_data.json"
 
 # Stock API details (Replace with your API key)
-API_KEY = "9G1VTZ2HC8BTVA5M"
+API_KEY = "{apikey}"
 STOCK_SYMBOL = "AAPL"
 API_URL = f"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={STOCK_SYMBOL}&interval=5min&apikey=9G1VTZ2HC8BTVA5M"
 
