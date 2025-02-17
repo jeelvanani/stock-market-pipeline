@@ -6,9 +6,9 @@ from azure.storage.filedatalake import DataLakeServiceClient
 # Replace with your Azure details
 STORAGE_ACCOUNT_NAME = "{stockdatastorage}"
 STORAGE_ACCOUNT_KEY = "{Account_key}"
-FILE_SYSTEM_NAME = "raw-stock-data"  # Container name in ADLS Gen2
-DIRECTORY_NAME = "raw-stock-data"
-FILE_NAME = "stock_data.json"
+FILE_SYSTEM_NAME = "{container name}"  # Container name in ADLS Gen2
+DIRECTORY_NAME = "{foldername}"
+FILE_NAME = "{FILE_NAME}"
 
 # Stock API details (Replace with your API key)
 API_KEY = "{apikey}"
