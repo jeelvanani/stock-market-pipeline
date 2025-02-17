@@ -1,0 +1,20 @@
+name: Run Databricks Job
+
+on:
+  push:
+    branches:
+      - main  # Triggers when you push to the main branch
+
+jobs:
+  databricks-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run Databricks Notebook
+        uses: databricks/run-notebook@v0
+        with:
+          databricks-host: ${https://adb-4228507554400429.9.azuredatabricks.net/?o=4228507554400429}
+          databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
+          notebook-path: "/Repos/databricks-stock-data/read_data"
